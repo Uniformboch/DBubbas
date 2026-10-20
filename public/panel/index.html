@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel del menú · D'Bubbas</title>
+  <meta name="theme-color" content="#261A4B">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/panel.css">
+</head>
+<body class="panel">
+  <header class="panel-cabeza">
+    <img src="../img/logo.png" width="44" height="44" alt="">
+    <h1 class="panel-titulo">Panel del menú</h1>
+    <a class="panel-ver" href="../" target="_blank" rel="noopener">Ver menú</a>
+  </header>
+
+  <main id="panel-main" class="panel-main" tabindex="-1">
+    <section id="vista-cargando" class="vista">
+      <p role="status">Cargando…</p>
+    </section>
+
+    <section id="vista-sin-config" class="vista tarjeta-panel" hidden>
+      <h2>Falta configurar la contraseña</h2>
+      <p>El panel todavía no tiene contraseña. Sigue la guía de configuración para crearla y vuelve a abrir esta página.</p>
+    </section>
+
+    <section id="vista-entrar" class="vista tarjeta-panel" hidden aria-labelledby="titulo-entrar">
+      <h2 id="titulo-entrar">Entrar</h2>
+      <form id="form-entrar" class="form-entrar" novalidate>
+        <div class="campo">
+          <label for="contrasena">Contraseña</label>
+          <input id="contrasena" name="contrasena" type="password" autocomplete="current-password" required aria-describedby="error-entrar">
+          <p id="error-entrar" class="error" role="alert"></p>
+        </div>
+        <button type="submit" class="boton-principal">Entrar</button>
+      </form>
+    </section>
+
+    <section id="vista-editor" class="vista" hidden>
+      <div class="pestanas" role="tablist" aria-label="Partes del menú">
+        <button type="button" role="tab" id="pes-bebidas" aria-controls="tab-bebidas" aria-selected="true">Bebidas</button>
+        <button type="button" role="tab" id="pes-comida" aria-controls="tab-comida" aria-selected="false" tabindex="-1">Postres</button>
+        <button type="button" role="tab" id="pes-temporada" aria-controls="tab-temporada" aria-selected="false" tabindex="-1">Temporada</button>
+        <button type="button" role="tab" id="pes-extras" aria-controls="tab-extras" aria-selected="false" tabindex="-1">Extras</button>
+        <button type="button" role="tab" id="pes-ajustes" aria-controls="tab-ajustes" aria-selected="false" tabindex="-1">Ajustes</button>
+      </div>
+      <div id="aviso-panel" class="aviso-panel" hidden></div>
+      <div id="tab-bebidas" role="tabpanel" aria-labelledby="pes-bebidas" class="tab"></div>
+      <div id="tab-comida" role="tabpanel" aria-labelledby="pes-comida" class="tab" hidden></div>
+      <div id="tab-temporada" role="tabpanel" aria-labelledby="pes-temporada" class="tab" hidden></div>
+      <div id="tab-extras" role="tabpanel" aria-labelledby="pes-extras" class="tab" hidden></div>
+      <div id="tab-ajustes" role="tabpanel" aria-labelledby="pes-ajustes" class="tab" hidden></div>
+    </section>
+  </main>
+
+  <div id="barra-guardar" class="barra-guardar" hidden>
+    <p class="barra-guardar-texto">Cambios sin guardar</p>
+    <button type="button" id="descartar" class="boton-secundario">Descartar</button>
+    <button type="button" id="guardar" class="boton-principal">Guardar</button>
+  </div>
+  <p id="aviso" class="aviso-breve" role="status" aria-live="polite"></p>
+
+  <dialog id="editor" class="hoja hoja-panel" aria-labelledby="editor-titulo"></dialog>
+
+  <dialog id="dialogo-entrar" class="confirmar" aria-labelledby="dialogo-entrar-titulo">
+    <h2 id="dialogo-entrar-titulo" class="confirmar-titulo">Tu sesión venció</h2>
+    <p class="confirmar-texto">Escribe la contraseña otra vez. Tus cambios siguen aquí.</p>
+    <form id="form-reentrar" novalidate>
+      <div class="campo">
+        <label for="contrasena-2">Contraseña</label>
+        <input id="contrasena-2" name="contrasena" type="password" autocomplete="current-password" aria-describedby="error-reentrar">
+        <p id="error-reentrar" class="error" role="alert"></p>
+      </div>
+      <div class="confirmar-botones">
+        <button type="submit" class="boton-principal">Entrar y continuar</button>
+        <button type="button" id="reentrar-cancelar" class="boton-secundario">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="dialogo-confirmar" class="confirmar" aria-labelledby="confirmar-titulo">
+    <h2 id="confirmar-titulo" class="confirmar-titulo"></h2>
+    <p id="confirmar-texto" class="confirmar-texto"></p>
+    <div class="confirmar-botones">
+      <button type="button" id="confirmar-si" class="boton-principal"></button>
+      <button type="button" id="confirmar-no" class="boton-secundario">Cancelar</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="../js/panel.mjs"></script>
+</body>
+</html>

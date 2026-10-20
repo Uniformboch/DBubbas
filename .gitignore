@@ -6,3 +6,6 @@ dist/
 .netlify/
 .env
 .claude/
+.datos-locales/
+.env.local
+
