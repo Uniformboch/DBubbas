@@ -1,0 +1,7 @@
+# Materiales originales y muestras: privados, no se suben
+materiales/
+muestras/
+node_modules/
+dist/
+.netlify/
+.env

@@ -1,0 +1,10 @@
+{
+  "activa": false,
+  "categoria": {
+    "id": "temporada",
+    "nombre": "Temporada",
+    "grupo": "bebidas",
+    "extrasPermitidos": [],
+    "productos": []
+  }
+}

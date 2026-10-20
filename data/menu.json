@@ -1,0 +1,1162 @@
+{
+  "config": {
+    "negocio": "D'Bubbas Hospital",
+    "whatsapp": "524771358745"
+  },
+  "tamanos": {
+    "mini": {
+      "nombre": "Mini"
+    },
+    "grande": {
+      "nombre": "Grande"
+    },
+    "p12": {
+      "nombre": "12 piezas"
+    },
+    "p25": {
+      "nombre": "25 piezas"
+    }
+  },
+  "extras": [
+    {
+      "id": "extra-bobba-normal",
+      "nombre": "Bobba normal (Tapioca)",
+      "precio": 7
+    },
+    {
+      "id": "extra-perla-explosiva-mango",
+      "nombre": "Perla explosiva mango",
+      "precio": 7
+    },
+    {
+      "id": "extra-perla-explosiva-fresa",
+      "nombre": "Perla explosiva fresa",
+      "precio": 7
+    },
+    {
+      "id": "extra-perla-explosiva-blueberry",
+      "nombre": "Perla explosiva blueberry",
+      "precio": 7
+    },
+    {
+      "id": "extra-perla-explosiva-taro",
+      "nombre": "Perla explosiva taro",
+      "precio": 7
+    },
+    {
+      "id": "extra-perla-explosiva-kiwi",
+      "nombre": "Perla explosiva kiwi",
+      "precio": 7
+    },
+    {
+      "id": "extra-jellys-de-mango",
+      "nombre": "Jellys de mango",
+      "precio": 7
+    },
+    {
+      "id": "extra-jellys-de-coco",
+      "nombre": "Jellys de coco",
+      "precio": 7
+    },
+    {
+      "id": "extra-jellys-de-lyche",
+      "nombre": "Jellys de lyche",
+      "precio": 7
+    },
+    {
+      "id": "extra-crema-batida",
+      "nombre": "Crema batida",
+      "precio": 7
+    },
+    {
+      "id": "untable-extra",
+      "nombre": "Untable extra",
+      "precio": 15
+    },
+    {
+      "id": "mermelada-extra",
+      "nombre": "Mermelada extra",
+      "precio": 15
+    },
+    {
+      "id": "fruta-extra",
+      "nombre": "Fruta extra",
+      "precio": 15
+    },
+    {
+      "id": "topping-extra",
+      "nombre": "Topping extra",
+      "precio": 15
+    }
+  ],
+  "categorias": [
+    {
+      "id": "frapeado",
+      "nombre": "Buba Frapeado",
+      "grupo": "bebidas",
+      "descripcion": "Incluye 1 topping gratis. Topping extra $7 c/u.",
+      "prefijoPedido": "Frapeado",
+      "extrasPermitidos": [
+        "extra-bobba-normal",
+        "extra-perla-explosiva-mango",
+        "extra-perla-explosiva-fresa",
+        "extra-perla-explosiva-blueberry",
+        "extra-perla-explosiva-taro",
+        "extra-perla-explosiva-kiwi",
+        "extra-jellys-de-mango",
+        "extra-jellys-de-coco",
+        "extra-jellys-de-lyche",
+        "extra-crema-batida"
+      ],
+      "opciones": [
+        {
+          "id": "topping-gratis",
+          "nombre": "Topping gratis",
+          "valores": [
+            {
+              "id": "sin-topping",
+              "nombre": "Sin topping"
+            },
+            {
+              "id": "bobba-normal-tapioca",
+              "nombre": "Bobba normal (Tapioca)"
+            },
+            {
+              "id": "perla-explosiva-mango",
+              "nombre": "Perla explosiva mango"
+            },
+            {
+              "id": "perla-explosiva-fresa",
+              "nombre": "Perla explosiva fresa"
+            },
+            {
+              "id": "perla-explosiva-blueberry",
+              "nombre": "Perla explosiva blueberry"
+            },
+            {
+              "id": "perla-explosiva-taro",
+              "nombre": "Perla explosiva taro"
+            },
+            {
+              "id": "perla-explosiva-kiwi",
+              "nombre": "Perla explosiva kiwi"
+            },
+            {
+              "id": "jellys-de-mango",
+              "nombre": "Jellys de mango"
+            },
+            {
+              "id": "jellys-de-coco",
+              "nombre": "Jellys de coco"
+            },
+            {
+              "id": "jellys-de-lyche",
+              "nombre": "Jellys de lyche"
+            },
+            {
+              "id": "crema-batida",
+              "nombre": "Crema batida"
+            }
+          ]
+        }
+      ],
+      "productos": [
+        {
+          "id": "frapeado-oreo",
+          "nombre": "Oreo",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-mazapan",
+          "nombre": "Mazapán",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-chocolate",
+          "nombre": "Chocolate",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-vainilla",
+          "nombre": "Vainilla",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-coco",
+          "nombre": "Coco",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-caramelo",
+          "nombre": "Caramelo",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-matcha",
+          "nombre": "Matcha",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-taro",
+          "nombre": "Taro",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-capuchino",
+          "nombre": "Capuchino",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-moka",
+          "nombre": "Moka",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-pina-colada",
+          "nombre": "Piña colada",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-chai-vainilla",
+          "nombre": "Chai vainilla",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "frapeado-chai-negro",
+          "nombre": "Chai negro",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        }
+      ]
+    },
+    {
+      "id": "mix",
+      "nombre": "Bubba Mix",
+      "grupo": "bebidas",
+      "descripcion": "Incluye 1 topping gratis. Topping extra $7 c/u.",
+      "prefijoPedido": "Bubba Mix",
+      "extrasPermitidos": [
+        "extra-bobba-normal",
+        "extra-perla-explosiva-mango",
+        "extra-perla-explosiva-fresa",
+        "extra-perla-explosiva-blueberry",
+        "extra-perla-explosiva-taro",
+        "extra-perla-explosiva-kiwi",
+        "extra-jellys-de-mango",
+        "extra-jellys-de-coco",
+        "extra-jellys-de-lyche",
+        "extra-crema-batida"
+      ],
+      "opciones": [
+        {
+          "id": "topping-gratis",
+          "nombre": "Topping gratis",
+          "valores": [
+            {
+              "id": "sin-topping",
+              "nombre": "Sin topping"
+            },
+            {
+              "id": "bobba-normal-tapioca",
+              "nombre": "Bobba normal (Tapioca)"
+            },
+            {
+              "id": "perla-explosiva-mango",
+              "nombre": "Perla explosiva mango"
+            },
+            {
+              "id": "perla-explosiva-fresa",
+              "nombre": "Perla explosiva fresa"
+            },
+            {
+              "id": "perla-explosiva-blueberry",
+              "nombre": "Perla explosiva blueberry"
+            },
+            {
+              "id": "perla-explosiva-taro",
+              "nombre": "Perla explosiva taro"
+            },
+            {
+              "id": "perla-explosiva-kiwi",
+              "nombre": "Perla explosiva kiwi"
+            },
+            {
+              "id": "jellys-de-mango",
+              "nombre": "Jellys de mango"
+            },
+            {
+              "id": "jellys-de-coco",
+              "nombre": "Jellys de coco"
+            },
+            {
+              "id": "jellys-de-lyche",
+              "nombre": "Jellys de lyche"
+            },
+            {
+              "id": "crema-batida",
+              "nombre": "Crema batida"
+            }
+          ]
+        }
+      ],
+      "productos": [
+        {
+          "id": "mix-moka-blanco",
+          "nombre": "Moka-blanco",
+          "precios": {
+            "grande": 67
+          }
+        },
+        {
+          "id": "mix-cajeta-quemada",
+          "nombre": "Cajeta-quemada",
+          "precios": {
+            "grande": 67
+          }
+        },
+        {
+          "id": "mix-taro-oreo",
+          "nombre": "Taro-oreo",
+          "precios": {
+            "grande": 67
+          }
+        },
+        {
+          "id": "mix-choco-fresa",
+          "nombre": "Choco-fresa",
+          "precios": {
+            "grande": 67
+          }
+        },
+        {
+          "id": "mix-matcha-coco",
+          "nombre": "Matcha-coco",
+          "precios": {
+            "grande": 67
+          }
+        },
+        {
+          "id": "mix-taro-berry",
+          "nombre": "Taro-berry",
+          "precios": {
+            "grande": 67
+          }
+        },
+        {
+          "id": "mix-matcha-fresa",
+          "nombre": "Matcha-fresa",
+          "precios": {
+            "grande": 67
+          }
+        }
+      ]
+    },
+    {
+      "id": "soda",
+      "nombre": "Buba Soda",
+      "grupo": "bebidas",
+      "descripcion": "Incluye 1 topping gratis. Topping extra $7 c/u.",
+      "prefijoPedido": "Soda",
+      "extrasPermitidos": [
+        "extra-bobba-normal",
+        "extra-perla-explosiva-mango",
+        "extra-perla-explosiva-fresa",
+        "extra-perla-explosiva-blueberry",
+        "extra-perla-explosiva-taro",
+        "extra-perla-explosiva-kiwi",
+        "extra-jellys-de-mango",
+        "extra-jellys-de-coco",
+        "extra-jellys-de-lyche",
+        "extra-crema-batida"
+      ],
+      "opciones": [
+        {
+          "id": "topping-gratis",
+          "nombre": "Topping gratis",
+          "valores": [
+            {
+              "id": "sin-topping",
+              "nombre": "Sin topping"
+            },
+            {
+              "id": "bobba-normal-tapioca",
+              "nombre": "Bobba normal (Tapioca)"
+            },
+            {
+              "id": "perla-explosiva-mango",
+              "nombre": "Perla explosiva mango"
+            },
+            {
+              "id": "perla-explosiva-fresa",
+              "nombre": "Perla explosiva fresa"
+            },
+            {
+              "id": "perla-explosiva-blueberry",
+              "nombre": "Perla explosiva blueberry"
+            },
+            {
+              "id": "perla-explosiva-taro",
+              "nombre": "Perla explosiva taro"
+            },
+            {
+              "id": "perla-explosiva-kiwi",
+              "nombre": "Perla explosiva kiwi"
+            },
+            {
+              "id": "jellys-de-mango",
+              "nombre": "Jellys de mango"
+            },
+            {
+              "id": "jellys-de-coco",
+              "nombre": "Jellys de coco"
+            },
+            {
+              "id": "jellys-de-lyche",
+              "nombre": "Jellys de lyche"
+            },
+            {
+              "id": "crema-batida",
+              "nombre": "Crema batida"
+            }
+          ]
+        }
+      ],
+      "productos": [
+        {
+          "id": "soda-maracuya",
+          "nombre": "Maracuya",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        },
+        {
+          "id": "soda-frambuesa",
+          "nombre": "Frambuesa",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        },
+        {
+          "id": "soda-blueberry",
+          "nombre": "Blueberry",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        },
+        {
+          "id": "soda-cereza",
+          "nombre": "Cereza",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        },
+        {
+          "id": "soda-uva",
+          "nombre": "Uva",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        },
+        {
+          "id": "soda-mango",
+          "nombre": "Mango",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        },
+        {
+          "id": "soda-fresa",
+          "nombre": "Fresa",
+          "precios": {
+            "mini": 36,
+            "grande": 60
+          }
+        }
+      ]
+    },
+    {
+      "id": "smothie",
+      "nombre": "Buba Smothie",
+      "grupo": "bebidas",
+      "descripcion": "Incluye 1 topping gratis. Topping extra $7 c/u.",
+      "prefijoPedido": "Smothie",
+      "extrasPermitidos": [
+        "extra-bobba-normal",
+        "extra-perla-explosiva-mango",
+        "extra-perla-explosiva-fresa",
+        "extra-perla-explosiva-blueberry",
+        "extra-perla-explosiva-taro",
+        "extra-perla-explosiva-kiwi",
+        "extra-jellys-de-mango",
+        "extra-jellys-de-coco",
+        "extra-jellys-de-lyche",
+        "extra-crema-batida"
+      ],
+      "opciones": [
+        {
+          "id": "topping-gratis",
+          "nombre": "Topping gratis",
+          "valores": [
+            {
+              "id": "sin-topping",
+              "nombre": "Sin topping"
+            },
+            {
+              "id": "bobba-normal-tapioca",
+              "nombre": "Bobba normal (Tapioca)"
+            },
+            {
+              "id": "perla-explosiva-mango",
+              "nombre": "Perla explosiva mango"
+            },
+            {
+              "id": "perla-explosiva-fresa",
+              "nombre": "Perla explosiva fresa"
+            },
+            {
+              "id": "perla-explosiva-blueberry",
+              "nombre": "Perla explosiva blueberry"
+            },
+            {
+              "id": "perla-explosiva-taro",
+              "nombre": "Perla explosiva taro"
+            },
+            {
+              "id": "perla-explosiva-kiwi",
+              "nombre": "Perla explosiva kiwi"
+            },
+            {
+              "id": "jellys-de-mango",
+              "nombre": "Jellys de mango"
+            },
+            {
+              "id": "jellys-de-coco",
+              "nombre": "Jellys de coco"
+            },
+            {
+              "id": "jellys-de-lyche",
+              "nombre": "Jellys de lyche"
+            },
+            {
+              "id": "crema-batida",
+              "nombre": "Crema batida"
+            }
+          ]
+        }
+      ],
+      "productos": [
+        {
+          "id": "smothie-lyche",
+          "nombre": "Lyche",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-fresa",
+          "nombre": "Fresa",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-mango",
+          "nombre": "Mango",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-kiwi",
+          "nombre": "Kiwi",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-blueberry",
+          "nombre": "Blueberry",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-frambuesa",
+          "nombre": "Frambuesa",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-cereza",
+          "nombre": "Cereza",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-maracuya",
+          "nombre": "Maracuya",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-manzana-verde",
+          "nombre": "Manzana verde",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        },
+        {
+          "id": "smothie-uva",
+          "nombre": "Uva",
+          "precios": {
+            "mini": 39,
+            "grande": 62
+          }
+        }
+      ]
+    },
+    {
+      "id": "milk",
+      "nombre": "Buba Milk",
+      "grupo": "bebidas",
+      "descripcion": "Incluye 1 topping gratis. Topping extra $7 c/u.",
+      "prefijoPedido": "Milk",
+      "extrasPermitidos": [
+        "extra-bobba-normal",
+        "extra-perla-explosiva-mango",
+        "extra-perla-explosiva-fresa",
+        "extra-perla-explosiva-blueberry",
+        "extra-perla-explosiva-taro",
+        "extra-perla-explosiva-kiwi",
+        "extra-jellys-de-mango",
+        "extra-jellys-de-coco",
+        "extra-jellys-de-lyche",
+        "extra-crema-batida"
+      ],
+      "opciones": [
+        {
+          "id": "topping-gratis",
+          "nombre": "Topping gratis",
+          "valores": [
+            {
+              "id": "sin-topping",
+              "nombre": "Sin topping"
+            },
+            {
+              "id": "bobba-normal-tapioca",
+              "nombre": "Bobba normal (Tapioca)"
+            },
+            {
+              "id": "perla-explosiva-mango",
+              "nombre": "Perla explosiva mango"
+            },
+            {
+              "id": "perla-explosiva-fresa",
+              "nombre": "Perla explosiva fresa"
+            },
+            {
+              "id": "perla-explosiva-blueberry",
+              "nombre": "Perla explosiva blueberry"
+            },
+            {
+              "id": "perla-explosiva-taro",
+              "nombre": "Perla explosiva taro"
+            },
+            {
+              "id": "perla-explosiva-kiwi",
+              "nombre": "Perla explosiva kiwi"
+            },
+            {
+              "id": "jellys-de-mango",
+              "nombre": "Jellys de mango"
+            },
+            {
+              "id": "jellys-de-coco",
+              "nombre": "Jellys de coco"
+            },
+            {
+              "id": "jellys-de-lyche",
+              "nombre": "Jellys de lyche"
+            },
+            {
+              "id": "crema-batida",
+              "nombre": "Crema batida"
+            }
+          ]
+        }
+      ],
+      "productos": [
+        {
+          "id": "milk-cafe-frio",
+          "nombre": "Café frío",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-moka",
+          "nombre": "Moka",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-capuchino",
+          "nombre": "Capuchino",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-oreo",
+          "nombre": "Oreo",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-matcha",
+          "nombre": "Matcha",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-taro",
+          "nombre": "Taro",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-chocolate",
+          "nombre": "Chocolate",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-caramelo",
+          "nombre": "Caramelo",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-mazapan",
+          "nombre": "Mazapán",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-coco",
+          "nombre": "Coco",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-chai-vainilla",
+          "nombre": "Chai vainilla",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-chai-negro",
+          "nombre": "Chai negro",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        },
+        {
+          "id": "milk-matcha-coco",
+          "nombre": "Matcha coco",
+          "precios": {
+            "mini": 39,
+            "grande": 65
+          }
+        }
+      ]
+    },
+    {
+      "id": "calientes",
+      "nombre": "Bebidas calientes",
+      "grupo": "bebidas",
+      "prefijoPedido": "Caliente",
+      "extrasPermitidos": [],
+      "productos": [
+        {
+          "id": "calientes-moka",
+          "nombre": "Moka",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-capuchino",
+          "nombre": "Capuchino",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-oreo",
+          "nombre": "Oreo",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-chocolate",
+          "nombre": "Chocolate",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-caramelo",
+          "nombre": "Caramelo",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-matcha",
+          "nombre": "Matcha",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-coco-matcha",
+          "nombre": "Coco-matcha",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-taro",
+          "nombre": "Taro",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-chai-negro",
+          "nombre": "Chai negro",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-chai-vainilla",
+          "nombre": "Chai vainilla",
+          "precios": {
+            "unico": 35
+          }
+        },
+        {
+          "id": "calientes-cafe-expreso",
+          "nombre": "Café expreso",
+          "precios": {
+            "unico": 35
+          }
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": "Postres",
+      "grupo": "comida",
+      "descripcion": "Ingrediente extra $15 c/u (indica cuál en notas).",
+      "extrasPermitidos": [
+        "untable-extra",
+        "mermelada-extra",
+        "fruta-extra",
+        "topping-extra"
+      ],
+      "productos": [
+        {
+          "id": "crepa-dulce",
+          "nombre": "Crepa dulce",
+          "descripcion": "3 ingredientes: 1 untable, 1 fruta y 1 topping.",
+          "precios": {
+            "unico": 48
+          },
+          "extrasPermitidos": [
+            "untable-extra",
+            "fruta-extra",
+            "topping-extra"
+          ],
+          "opciones": [
+            {
+              "id": "untable",
+              "nombre": "Untable",
+              "valores": [
+                {
+                  "id": "m-fresa",
+                  "nombre": "M. Fresa"
+                },
+                {
+                  "id": "m-zarzamora",
+                  "nombre": "M. Zarzamora"
+                },
+                {
+                  "id": "q-philadelphia",
+                  "nombre": "Q. Philadelphia"
+                },
+                {
+                  "id": "chocolate",
+                  "nombre": "Chocolate"
+                },
+                {
+                  "id": "lechera",
+                  "nombre": "Lechera"
+                },
+                {
+                  "id": "cajeta",
+                  "nombre": "Cajeta"
+                },
+                {
+                  "id": "nutella",
+                  "nombre": "Nutella"
+                }
+              ]
+            },
+            {
+              "id": "fruta",
+              "nombre": "Fruta",
+              "valores": [
+                {
+                  "id": "fresa",
+                  "nombre": "Fresa"
+                },
+                {
+                  "id": "platano",
+                  "nombre": "Platano"
+                },
+                {
+                  "id": "durazno",
+                  "nombre": "Durazno"
+                }
+              ]
+            },
+            {
+              "id": "topping",
+              "nombre": "Topping",
+              "valores": [
+                {
+                  "id": "coco-rayado",
+                  "nombre": "Coco rayado"
+                },
+                {
+                  "id": "chispas-chocolate",
+                  "nombre": "Chispas chocolate"
+                },
+                {
+                  "id": "chispas-colores",
+                  "nombre": "Chispas colores"
+                },
+                {
+                  "id": "mazapan",
+                  "nombre": "Mazapán"
+                },
+                {
+                  "id": "oreo",
+                  "nombre": "Oreo"
+                },
+                {
+                  "id": "granola",
+                  "nombre": "Granola"
+                },
+                {
+                  "id": "crema-batida",
+                  "nombre": "Crema batida",
+                  "precio": 15
+                },
+                {
+                  "id": "helado",
+                  "nombre": "Helado",
+                  "precio": 15
+                },
+                {
+                  "id": "mini-kisses",
+                  "nombre": "Mini kisses",
+                  "precio": 15
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mini-hotcakes",
+          "nombre": "Mini hotcakes",
+          "descripcion": "1 topping, 1 mermelada y 1 fruta.",
+          "precios": {
+            "p12": 38,
+            "p25": 45
+          },
+          "extrasPermitidos": [
+            "mermelada-extra",
+            "fruta-extra",
+            "topping-extra"
+          ],
+          "opciones": [
+            {
+              "id": "topping",
+              "nombre": "Topping",
+              "valores": [
+                {
+                  "id": "coco-rayado",
+                  "nombre": "Coco rayado"
+                },
+                {
+                  "id": "chispas-chocolate",
+                  "nombre": "Chispas chocolate"
+                },
+                {
+                  "id": "chispas-colores",
+                  "nombre": "Chispas colores"
+                },
+                {
+                  "id": "mini-kisses",
+                  "nombre": "Mini kisses"
+                },
+                {
+                  "id": "mazapan",
+                  "nombre": "Mazapán"
+                },
+                {
+                  "id": "oreo",
+                  "nombre": "Oreo"
+                },
+                {
+                  "id": "granola",
+                  "nombre": "Granola"
+                }
+              ]
+            },
+            {
+              "id": "mermelada",
+              "nombre": "Mermelada",
+              "valores": [
+                {
+                  "id": "fresa",
+                  "nombre": "Fresa"
+                },
+                {
+                  "id": "zarzamora",
+                  "nombre": "Zarzamora"
+                },
+                {
+                  "id": "caramelo",
+                  "nombre": "Caramelo"
+                },
+                {
+                  "id": "chocolate",
+                  "nombre": "Chocolate"
+                },
+                {
+                  "id": "lechera",
+                  "nombre": "Lechera"
+                }
+              ]
+            },
+            {
+              "id": "fruta",
+              "nombre": "Fruta",
+              "valores": [
+                {
+                  "id": "fresa",
+                  "nombre": "Fresa"
+                },
+                {
+                  "id": "platano",
+                  "nombre": "Platano"
+                },
+                {
+                  "id": "durazno",
+                  "nombre": "Durazno"
+                },
+                {
+                  "id": "helado",
+                  "nombre": "Helado"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
