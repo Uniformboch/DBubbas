@@ -1,5 +1,8 @@
 // Menú público: carga los datos y dibuja secciones, chips y selector de grupo.
 import { categorias, productosVisibles, tamanosDe } from './lib/catalogo.mjs';
+import { el, dinero } from './dom.mjs';
+import { abrirHoja } from './hoja.mjs';
+import { iniciarPedido, menuCargado } from './pedido.mjs';
 
 const GRUPOS = { bebidas: 'Bebidas', comida: 'Postres' };
 
@@ -11,23 +14,6 @@ const grupos = $('#grupos');
 const navegacion = document.querySelector('.navegacion');
 
 const app = { menu: null, temporada: null, grupo: 'bebidas' };
-
-/** Crea un elemento con atributos e hijos (texto o nodos). Nunca usa innerHTML. */
-function el(etiqueta, attrs = {}, ...hijos) {
-  const nodo = document.createElement(etiqueta);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (v === false || v == null) continue;
-    if (k === 'class') nodo.className = v;
-    else if (k === 'dataset') Object.assign(nodo.dataset, v);
-    else if (k === 'style') for (const [p, val] of Object.entries(v)) nodo.style.setProperty(p, val);
-    else if (v === true) nodo.setAttribute(k, '');
-    else nodo.setAttribute(k, v);
-  }
-  for (const h of hijos.flat()) if (h != null && h !== false) nodo.append(h);
-  return nodo;
-}
-
-export const dinero = (n) => `$${n}`;
 
 function nombreTamano(clave) {
   if (clave === 'unico') return 'Precio';
@@ -199,7 +185,7 @@ async function cargar() {
     irASeccion(destino, { instantaneo: true });
     marcarSeccionVisible();
   }
-  document.dispatchEvent(new CustomEvent('menu:listo', { detail: app }));
+  menuCargado(app);
 }
 
 grupos.addEventListener('click', (e) => {
@@ -231,6 +217,11 @@ window.addEventListener('scroll', () => {
 
 new ResizeObserver(medirNavegacion).observe(navegacion);
 
-export { app, el };
+// Tocar un producto abre su hoja
+secciones.addEventListener('click', (e) => {
+  const boton = e.target.closest('[data-producto]');
+  if (boton && !boton.disabled) abrirHoja(app, boton.dataset.producto, boton);
+});
 
+iniciarPedido(app);
 cargar();

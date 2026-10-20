@@ -33,7 +33,60 @@
       <p id="estado" class="estado" role="status" aria-live="polite">Cargando menú…</p>
       <div id="secciones"></div>
     </main>
+    <aside id="pedido-lugar" class="pedido-lugar" aria-label="Tu pedido">
+      <section id="pedido" class="pedido" aria-labelledby="pedido-titulo">
+        <div class="pedido-cabeza">
+          <h2 id="pedido-titulo" class="pedido-titulo" tabindex="-1">Tu pedido</h2>
+          <button type="button" class="cerrar" data-cerrar-pedido aria-label="Cerrar pedido">×</button>
+        </div>
+        <p id="pedido-vacio" class="pedido-vacio">Aún no agregas productos. Toca uno del menú para empezar.</p>
+        <ul id="lineas" class="lineas" hidden></ul>
+        <p id="pedido-total" class="pedido-total" hidden></p>
+
+        <form id="form-pedido" class="form-pedido" novalidate>
+          <p id="error-carrito" class="error"></p>
+          <div class="campo">
+            <label for="c-nombre">Nombre</label>
+            <input id="c-nombre" name="nombre" type="text" autocomplete="name" maxlength="60" required aria-describedby="error-nombre">
+            <p id="error-nombre" class="error"></p>
+          </div>
+          <fieldset class="campo" aria-describedby="error-entrega">
+            <legend>Entrega</legend>
+            <label class="opcion"><input type="radio" name="entrega" value="recoger" required> <span class="opcion-nombre">Recoger en sucursal</span></label>
+            <label class="opcion"><input type="radio" name="entrega" value="domicilio"> <span class="opcion-nombre">A domicilio</span></label>
+            <p id="error-entrega" class="error"></p>
+          </fieldset>
+          <div id="campo-direccion" class="campo" hidden>
+            <label for="c-direccion">Dirección</label>
+            <textarea id="c-direccion" name="direccion" rows="2" autocomplete="street-address" maxlength="200" aria-describedby="nota-envio error-direccion"></textarea>
+            <p id="nota-envio" class="nota">El costo de envío se confirma por WhatsApp.</p>
+            <p id="error-direccion" class="error"></p>
+          </div>
+          <div class="campo">
+            <label for="c-notas">Notas <span class="opcional">(opcional)</span></label>
+            <textarea id="c-notas" name="notas" rows="2" maxlength="300" aria-describedby="error-notas"></textarea>
+            <p id="error-notas" class="error"></p>
+          </div>
+          <button type="submit" class="boton-principal boton-whatsapp">Enviar pedido por WhatsApp</button>
+        </form>
+      </section>
+    </aside>
   </div>
+
+  <button type="button" id="barra-pedido" class="barra-pedido" hidden></button>
+  <p id="aviso" class="aviso-breve" role="status" aria-live="polite"></p>
+
+  <dialog id="hoja-producto" class="hoja"></dialog>
+  <dialog id="hoja-pedido" class="hoja hoja-pedido" aria-labelledby="pedido-titulo"></dialog>
+  <dialog id="confirmar-envio" class="confirmar" aria-labelledby="confirmar-titulo">
+    <h2 id="confirmar-titulo" class="confirmar-titulo">¿Ya enviaste tu pedido?</h2>
+    <p class="confirmar-texto">Se abrió WhatsApp con tu pedido escrito. Solo falta tocar enviar en WhatsApp.</p>
+    <div class="confirmar-botones">
+      <button type="button" id="envio-listo" class="boton-principal">Sí, empezar otro pedido</button>
+      <button type="button" id="envio-abrir" class="boton-secundario">Abrir WhatsApp</button>
+      <button type="button" id="envio-volver" class="boton-secundario">Volver a mi pedido</button>
+    </div>
+  </dialog>
 
   <footer class="pie">
     <p>D'Bubbas Hospital · Pedidos por WhatsApp</p>
