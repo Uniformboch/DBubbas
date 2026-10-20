@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url("../fonts/lilita-one-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Paleta medida del logo y el menú impreso */
+  --morado: #563BAC;
+  --morado-oscuro: #45308A;
+  --lila: #876AD6;
+  --morado-noche: #261A4B;
+  --naranja: #EEAE60;
+  --cafe: #964619;
+  --cafe-texto: #75492F;
+  --rosa: #FE65C5;
+  --crema: #EDE6DE;
+  --crema-2: #E8E0D8;
+  --tinta: #1B191C;
+  --blanco: #FFFFFF;
+  --gris: #8A8282;
+  --linea: #B9AEA3;
+  --error: #B3261E;
+
+  --f-titulo: "Lilita One", "Segoe UI Black", "Arial Black", system-ui, sans-serif;
+  --f-texto: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --radio: 14px;
+  --alto-nav: 112px;
+  /* Espacio para el botón fijo del proveedor (Netlify) abajo a la derecha */
+  --espacio-proveedor: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-padding-top: calc(var(--alto-nav) + 8px); -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--f-texto);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+button { font: inherit; color: inherit; }
+
+:focus-visible { outline: 3px solid var(--morado-noche); outline-offset: 2px; }
+
+[hidden] { display: none !important; }
+
+.saltar {
+  position: absolute; left: 8px; top: -60px; z-index: 50;
+  background: var(--morado-noche); color: var(--blanco);
+  padding: 10px 14px; border-radius: 10px; text-decoration: none; font-weight: 700;
+}
+.saltar:focus { top: 8px; }
+
+/* Portada */
+.portada {
+  background: var(--morado);
+  color: var(--blanco);
+  text-align: center;
+  padding: 24px 16px 22px;
+}
+.portada-logo {
+  display: block; width: 132px; height: 132px; margin: 0 auto 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .18);
+}
+.portada-titulo {
+  margin: 0;
+  font-family: var(--f-titulo); font-weight: 400;
+  font-size: clamp(30px, 9vw, 44px); line-height: 1; letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.portada-sucursal {
+  margin: 6px 0 0;
+  font-weight: 700; font-size: 14px; letter-spacing: .4em; text-transform: uppercase;
+  padding-left: .4em;
+}
+.portada-lema { margin: 12px 0 0; font-size: 14px; font-weight: 500; opacity: .92; }
+
+/* Navegación fija: selector de grupo + chips */
+.navegacion {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--blanco);
+  border-bottom: 2px solid var(--tinta);
+  padding: 10px 0 0;
+}
+.grupos {
+  display: flex; gap: 4px; margin: 0 16px 8px; padding: 4px;
+  background: var(--crema); border: 2px solid var(--tinta); border-radius: 999px;
+  max-width: 420px;
+}
+.grupo {
+  flex: 1; min-height: 40px; border: 0; border-radius: 999px; background: transparent;
+  font-family: var(--f-titulo); font-size: 17px; letter-spacing: .03em; cursor: pointer;
+  color: var(--morado-noche);
+}
+.grupo[aria-pressed="true"] { background: var(--morado); color: var(--blanco); }
+
+.chips {
+  display: flex; gap: 8px; overflow-x: auto; padding: 2px 16px 10px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; min-height: 44px; padding: 0 16px;
+  border: 2px solid var(--morado); border-radius: 999px; background: var(--blanco);
+  color: var(--morado); font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;
+}
+.chip[aria-current="true"] { background: var(--morado); color: var(--blanco); }
+
+/* Contenido */
+/* Altura mínima: así cualquier sección (aun la última o un grupo corto) puede subir hasta la barra fija */
+.pagina { max-width: 760px; margin: 0 auto; padding: 8px 16px 0; min-height: calc(100vh - var(--alto-nav)); min-height: calc(100dvh - var(--alto-nav)); }
+.menu:focus { outline: none; }
+.estado { margin: 24px 0; text-align: center; font-weight: 600; }
+.estado:empty { display: none; }
+.estado .reintentar {
+  display: block; margin: 12px auto 0; min-height: 44px; padding: 0 20px;
+  border: 2px solid var(--tinta); border-radius: 999px; background: var(--naranja); font-weight: 700; cursor: pointer;
+}
+
+.seccion { padding-top: 22px; }
+.seccion-titulo {
+  display: inline-block; margin: 0;
+  background: var(--morado); color: var(--blanco);
+  font-family: var(--f-titulo); font-weight: 400; font-size: 21px; letter-spacing: .03em;
+  padding: 6px 18px; border-radius: 999px; text-transform: uppercase;
+}
+.seccion[data-cat="calientes"] .seccion-titulo { background: var(--cafe); }
+.seccion[data-grupo="comida"] .seccion-titulo { background: var(--rosa); color: var(--tinta); }
+.seccion-desc { margin: 8px 0 0; color: var(--morado); font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+
+/* Tabla de precios por tamaño */
+.tabla {
+  margin-top: 10px;
+  background: var(--crema-2); border: 2px solid var(--tinta);
+  padding: 4px 12px 6px;
+  --col: 62px;
+}
+.fila {
+  display: grid; grid-template-columns: 1fr repeat(var(--cols, 2), var(--col));
+  align-items: center; column-gap: 4px;
+}
+.encabezado { padding: 8px 0 4px; }
+.encabezado span {
+  grid-column: span 1;
+  text-align: center; background: var(--naranja); border-radius: 999px;
+  font-family: var(--f-titulo); font-size: 13px; letter-spacing: .03em; padding: 3px 0;
+  text-transform: uppercase;
+}
+.encabezado .vacio { background: none; }
+.producto {
+  width: 100%; min-height: 48px; padding: 8px 0;
+  background: none; border: 0; border-bottom: 1px dashed var(--linea);
+  text-align: left; cursor: pointer;
+}
+.producto:last-child { border-bottom: 0; }
+.producto:hover:not(:disabled) .producto-nombre { color: var(--morado); }
+.producto-nombre {
+  font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.producto-precio { text-align: center; font-weight: 700; font-size: 15px; }
+.producto-precio.sin { color: var(--gris); }
+.producto:disabled { cursor: not-allowed; color: var(--gris); }
+.etiqueta-agotado {
+  display: inline-block; margin-left: 6px; vertical-align: 2px;
+  background: var(--gris); color: var(--blanco); border-radius: 6px;
+  font-size: 10px; letter-spacing: .06em; padding: 2px 6px;
+}
+
+/* Tarjetas (postres y temporada) */
+.tarjetas { display: grid; gap: 12px; margin-top: 10px; }
+.tarjeta {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: start;
+  width: 100%; padding: 14px 16px; text-align: left; cursor: pointer;
+  background: var(--crema-2); border: 2px solid var(--tinta);
+}
+.tarjeta:hover:not(:disabled) .tarjeta-nombre { color: var(--morado); }
+.tarjeta-foto {
+  grid-column: 1 / -1; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border: 2px solid var(--tinta); border-radius: 8px; background: var(--crema);
+}
+.tarjeta-nombre {
+  font-family: var(--f-titulo); font-weight: 400; font-size: 24px; line-height: 1.1;
+  color: var(--cafe-texto); text-transform: uppercase;
+}
+.tarjeta-precios { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.tarjeta-precio {
+  background: var(--naranja); border-radius: 999px; padding: 3px 10px;
+  font-weight: 800; font-size: 14px; white-space: nowrap;
+}
+.tarjeta-desc { grid-column: 1 / -1; margin: 0; font-size: 14px; font-weight: 500; }
+.tarjeta:disabled { cursor: not-allowed; }
+.tarjeta:disabled .tarjeta-nombre, .tarjeta:disabled .tarjeta-desc { color: var(--gris); }
+.tarjeta:disabled .tarjeta-foto { filter: grayscale(1); opacity: .6; }
+
+.pie {
+  margin-top: 40px; padding: 20px 16px calc(24px + var(--espacio-proveedor));
+  text-align: center; font-size: 13px; color: var(--cafe-texto); font-weight: 600;
+}
+.pie p { margin: 0; }
+
+@media (min-width: 768px) {
+  :root { --alto-nav: 116px; }
+  .grupos { margin-left: auto; margin-right: auto; }
+  /* Centrados cuando caben; si no, siguen deslizándose en un solo renglón */
+  .chip:first-child { margin-left: auto; }
+  .chip:last-child { margin-right: auto; }
+  .tabla { --col: 84px; padding: 6px 18px 8px; }
+  .producto-nombre, .producto-precio { font-size: 16px; }
+  .tarjetas { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menú D'Bubbas Hospital</title>
+  <meta name="description" content="Menú de D'Bubbas Hospital: bebidas con tapioca y postres. Arma tu pedido y envíalo por WhatsApp.">
+  <meta name="theme-color" content="#563BAC">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preload" href="fonts/lilita-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <a class="saltar" href="#menu">Saltar al menú</a>
+
+  <header class="portada">
+    <img class="portada-logo" src="img/logo.png" width="160" height="160" alt="Logo de D'Bubbas, bebidas con tapioca">
+    <h1 class="portada-titulo">Menú D'Bubbas</h1>
+    <p class="portada-sucursal">Hospital</p>
+    <p class="portada-lema">Arma tu pedido y envíalo por WhatsApp</p>
+  </header>
+
+  <nav class="navegacion" aria-label="Secciones del menú">
+    <div class="grupos" id="grupos" role="group" aria-label="Tipo de producto" hidden></div>
+    <div class="chips" id="chips"></div>
+  </nav>
+
+  <div class="pagina">
+    <main id="menu" class="menu" tabindex="-1">
+      <p id="estado" class="estado" role="status" aria-live="polite">Cargando menú…</p>
+      <div id="secciones"></div>
+    </main>
+  </div>
+
+  <footer class="pie">
+    <p>D'Bubbas Hospital · Pedidos por WhatsApp</p>
+  </footer>
+
+  <script type="module" src="js/app.mjs"></script>
+</body>
+</html>

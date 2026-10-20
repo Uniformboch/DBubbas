@@ -1,0 +1,15 @@
+{
+  "name": "Menú D'Bubbas Hospital",
+  "short_name": "D'Bubbas",
+  "description": "Bebidas con tapioca y postres. Arma tu pedido y envíalo por WhatsApp.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EDE6DE",
+  "theme_color": "#563BAC",
+  "icons": [
+    { "src": "img/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "img/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
